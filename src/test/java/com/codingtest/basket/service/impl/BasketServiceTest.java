@@ -28,7 +28,7 @@ import com.codingtest.basket.domain.Basket;
  * 
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:ApplicationContextTest.xml"})
+@ContextConfiguration(locations = {"classpath:ApplicationContext.xml"})
 public class BasketServiceTest {
 
 	static final Logger logger = Logger.getLogger(BasketServiceTest.class);
@@ -65,34 +65,31 @@ public class BasketServiceTest {
 	 * @throws Exception
 	 */
 	@Test
-	public void testFinalPrice5Products() {
+	public void testNoDiscountAsNotEnoughItemsSelected() {
 		basketService.setBasket(basket);
 		
 		List<String> productIds = new LinkedList<>();
 		productIds.add("Apples");
+		productIds.add("Oranges");		
 		productIds.add("Oranges");
-		productIds.add("Apples");
-		productIds.add("Oranges");
-		productIds.add("Apples");
 		
 		float finalPrice = basketService.calculateFinalPrice(productIds);
 		
 		if (logger.isDebugEnabled()) {
 			logger.debug("The final price : " + finalPrice);
 		}
-		assertEquals("Final Price", 2.30, (double)finalPrice, 0.000001);
+		assertEquals("No Discount given", 1.10, (double)finalPrice, 0.000001);
 	}
 		
 	/**
 	 * @throws Exception
 	 */
 	@Test
-	public void testFinalPrice3Products() {
+	public void testDiscountHalfPriceApplesSelected() {
 		basketService.setBasket(basket);
 		
 		List<String> productIds = new LinkedList<>();
 		productIds.add("Apples");
-		productIds.add("Oranges");
 		productIds.add("Apples");
 		
 		float finalPrice = basketService.calculateFinalPrice(productIds);
@@ -100,7 +97,27 @@ public class BasketServiceTest {
 		if (logger.isDebugEnabled()) {
 			logger.debug("The price is " + finalPrice);
 		}
-		assertEquals("Final Price", 1.45, (double)finalPrice, 0.000001);
+		assertEquals("Discount given", 0.60, (double)finalPrice, 0.000001);
+	}
+	
+	/**
+	 * @throws Exception
+	 */
+	@Test
+	public void testDiscount3ForThePriceOf2Selected() {
+		basketService.setBasket(basket);
+		
+		List<String> productIds = new LinkedList<>();
+		productIds.add("Oranges");
+		productIds.add("Oranges");
+		productIds.add("Oranges");
+		
+		float finalPrice = basketService.calculateFinalPrice(productIds);
+		
+		if (logger.isDebugEnabled()) {
+			logger.debug("The price is " + finalPrice);
+		}
+		assertEquals("Discount given", 0.50, (double)finalPrice, 0.000001);
 	}
 	
 	/**
@@ -118,7 +135,7 @@ public class BasketServiceTest {
 		if (logger.isDebugEnabled()) {
 			logger.debug("The price is " + finalPrice);
 		}
-		assertEquals("No Final Price", 0.0, (double)finalPrice, 0.000001);
+		assertEquals("No discount given", 0.0, (double)finalPrice, 0.000001);
 	}
 	
 }

@@ -1,5 +1,7 @@
 E:\Java Exercises\shopping-basket-hmrc\src\main\java\com\codingtest\basket\service\IBasketService.java
 E:\Java Exercises\shopping-basket-hmrc\src\main\java\com\codingtest\basket\domain\Product.java
+E:\Java Exercises\shopping-basket-hmrc\src\main\java\com\codingtest\basket\offer\Offer.java
 E:\Java Exercises\shopping-basket-hmrc\src\main\java\com\codingtest\basket\PriceBasket.java
+E:\Java Exercises\shopping-basket-hmrc\src\main\java\com\codingtest\basket\offer\IOffer.java
 E:\Java Exercises\shopping-basket-hmrc\src\main\java\com\codingtest\basket\service\impl\BasketService.java
 E:\Java Exercises\shopping-basket-hmrc\src\main\java\com\codingtest\basket\domain\Basket.java

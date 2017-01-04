@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+					
+	<!-- OFFERS -->	
+	<bean name="applesOffer" class="com.codingtest.basket.offer.Offer">
+		<property name="productOnOffer" ref="apples" />
+		<property name="discount" value="100" />
+		<property name="description" value="Buy one, get one free on Apples" />
+		<property name="requiredProduct" ref="apples" />
+		<property name="minNumberProductsRequired" value="2" />		
+	</bean>
+	
+	<bean name="orangesOffer" class="com.codingtest.basket.offer.Offer">
+		<property name="productOnOffer" ref="oranges" />
+		<property name="discount" value="100" />
+		<property name="description" value="3 for the price of 2 on Oranges" />
+		<property name="requiredProduct" ref="oranges" />
+		<property name="minNumberProductsRequired" value="3" />		
+	</bean>
+
+</beans>

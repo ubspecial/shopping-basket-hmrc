@@ -1,1 +1,1 @@
-java -jar shoppingbasket-1.0.0-SNAPSHOT.jar Apples Apples Oranges Apples
+java -jar shoppingbasket-2.0.0-SNAPSHOT.jar Apples Apples Oranges Apples

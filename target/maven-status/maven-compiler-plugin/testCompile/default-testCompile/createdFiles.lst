@@ -1,4 +1,5 @@
 com\codingtest\basket\domain\ProductTest.class
 com\codingtest\basket\service\impl\BasketServiceTest.class
+com\codingtest\basket\offer\OfferTest.class
 com\codingtest\basket\PriceBasketTest.class
 com\codingtest\basket\domain\BasketTest.class

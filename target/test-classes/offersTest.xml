@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+		
+	<!-- OFFERS -->
+	<bean name="applesQuarterPriceOffer" class="com.codingtest.basket.offer.Offer">
+		<property name="productOnOffer" ref="apples" />
+		<property name="discount" value="75" />
+		<property name="description" value="Buy 2 bags of oranges and get a bag of apples for 1/4 price" />
+		<property name="requiredProduct" ref="oranges" />
+		<property name="minNumberProductsRequired" value="2" />		
+	</bean>
+
+</beans>

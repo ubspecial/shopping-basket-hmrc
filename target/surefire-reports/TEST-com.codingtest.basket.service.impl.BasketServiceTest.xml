@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.codingtest.basket.service.impl.BasketServiceTest" time="0.187" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.codingtest.basket.service.impl.BasketServiceTest" time="0.485" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="E:\Tools\jdk1.8.0_112\jre\bin"/>
@@ -66,7 +66,8 @@
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
   <testcase name="testInValidAsUsedUnknownProducts" classname="com.codingtest.basket.service.impl.BasketServiceTest" time="0"/>
-  <testcase name="testFinalPrice5Products" classname="com.codingtest.basket.service.impl.BasketServiceTest" time="0.032"/>
   <testcase name="testBean" classname="com.codingtest.basket.service.impl.BasketServiceTest" time="0.016"/>
-  <testcase name="testFinalPrice3Products" classname="com.codingtest.basket.service.impl.BasketServiceTest" time="0.015"/>
+  <testcase name="testNoDiscountAsNotEnoughItemsSelected" classname="com.codingtest.basket.service.impl.BasketServiceTest" time="0.016"/>
+  <testcase name="testDiscountHalfPriceApplesSelected" classname="com.codingtest.basket.service.impl.BasketServiceTest" time="0.016"/>
+  <testcase name="testDiscount3ForThePriceOf2Selected" classname="com.codingtest.basket.service.impl.BasketServiceTest" time="0.016"/>
 </testsuite>

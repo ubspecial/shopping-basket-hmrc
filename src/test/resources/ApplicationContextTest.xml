@@ -19,9 +19,17 @@
 		<property name="currencyLocal" value="UK" />
 	</bean>
 	
+	<!-- OFFERS -->
+	<import resource="classpath:offersTest.xml"/>
+	
 	<!-- BASKET SERVICE -->
 	<bean name="basketService" class="com.codingtest.basket.service.impl.BasketService">
 		<property name="basket" ref="basket"/>
+		<property name="offers">
+			<set>
+				<ref bean="applesQuarterPriceOffer" />
+			</set>
+		</property>
 	</bean>
 
 </beans>
