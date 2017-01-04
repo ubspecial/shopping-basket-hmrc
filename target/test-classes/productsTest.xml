@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+		
+	<!-- PRODUCTS -->
+	<bean name="apples" class="com.codingtest.basket.domain.Product">
+		<property name="productId" value="apples" />
+		<property name="description" value="Bag of Apples" />
+		<property name="price" value="0.60" />
+	</bean>
+	
+	<bean name="oranges" class="com.codingtest.basket.domain.Product">
+		<property name="productId" value="oranges" />
+		<property name="description" value="Bag of Oranges" />
+		<property name="price" value="0.25" />
+	</bean>
+
+</beans>
